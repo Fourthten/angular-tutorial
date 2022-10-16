@@ -1,0 +1,15 @@
+<!-- <h1 class="text-3xl font-bold underline">
+  Hello world!
+</h1>
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/items">Item</a>
+</nav>
+<router-outlet></router-outlet> -->
+
+<app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<app-body
+  [collapsed]="isSideNavCollapsed"
+  [screenWidth]="screenWidth"
+></app-body>

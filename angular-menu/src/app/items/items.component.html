@@ -1,0 +1,23 @@
+<h2>My Items</h2>
+
+<div>
+  <label for="new-item">Item name: </label>
+  <input id="new-item" #itemName />
+
+  <button type="button" class="add-button" (click)="add(itemName.value); itemName.value=''">
+    Add item now
+  </button>
+  <a class="form" routerLink="/form">Add new</a>
+</div>
+
+<ul class="items">
+  <li *ngFor="let item of items">
+    <a routerLink="/detail/{{item.id}}">
+      <span class="badge">{{item.id}}</span> {{item.name}}
+    </a>
+    <button type="button" class="view" title="view item"
+      (click)="view(item)">&lt;o&gt;</button>
+    <button type="button" class="delete" title="delete item"
+      (click)="delete(item)">x</button>
+  </li>
+</ul>

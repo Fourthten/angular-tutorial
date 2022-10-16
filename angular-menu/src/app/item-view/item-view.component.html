@@ -1,0 +1,14 @@
+<div *ngIf="item">
+  <h2>{{item.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{item.id}}</div>
+  <div>
+    <label for="item-name">Item name: {{item.name}}</label>
+  </div>
+  <div>
+    <label for="item-price">Item price: {{item.price}}</label>
+  </div>
+  <div>
+    <label for="item-type">Item type: {{item.type}}</label>
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+</div>
